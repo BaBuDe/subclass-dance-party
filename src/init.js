@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  document.getElementById('intro').play();
+
   window.dancers = [];
   var alreadyCalled = false;
 
@@ -18,11 +20,14 @@ $(document).ready(function(){
      * to the stage.
      */
 
-     $('.regularShawn').hide();
 
-     // make a dancer with a random position
+
     if (!alreadyCalled) {
-      for (var i=0; i<10; i++) {
+      $('.regularShawn').hide();
+      // document.getElementById('intro').pause();
+      
+      for (var i=0; i<30; i++) {
+        // make a dancer with a random position
         var dancer = new BlinkyDancer(
           $("body").height() * Math.random(),
           $("body").width() * Math.random(),
